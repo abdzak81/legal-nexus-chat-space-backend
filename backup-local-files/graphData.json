@@ -1,0 +1,74 @@
+{
+  "vertices": [
+    {
+      "id": "person1",
+      "label": "Person",
+      "name": "أحمد المرزوقي",
+      "role": "مدير"
+    },
+    {
+      "id": "person2",
+      "label": "Person",
+      "name": "ناصر بن صلاح الطويل",
+      "role": "مدير"
+    },
+    {
+      "id": "person3",
+      "label": "Person",
+      "name": "سالم بن سالم المناعي",
+      "role": "مدير"
+    },
+    {
+      "id": "person4",
+      "label": "Person",
+      "name": "نور الكعبي",
+      "role": "باحث قانوني"
+    },
+    { "id": "dept1", "label": "Department", "name": "إدارة شؤون الشركات" },
+    { "id": "dept2", "label": "Department", "name": "إدارة الشؤون القانونية" },
+    { "id": "committee1", "label": "Committee", "name": "لجنة مدققي الحسابات" },
+    { "id": "section1", "label": "Section", "name": "قسم الدراسات القانونية" },
+    {
+      "id": "law1",
+      "label": "Law",
+      "name": "قانون رقم (8) لسنة 2020 بتنظيم مهنة تدقيق الحسابات"
+    },
+    { "id": "art4", "label": "Article", "name": "المادة (4)" },
+    { "id": "art6", "label": "Article", "name": "المادة (6)" },
+    { "id": "art10", "label": "Article", "name": "المادة (10)" },
+    { "id": "art18", "label": "Article", "name": "المادة (18)" },
+    { "id": "art26", "label": "Article", "name": "المادة (26)" },
+    { "id": "memo1", "label": "Document", "name": "مذكرة بالرأي القانوني" },
+    { "id": "letter1", "label": "Letter", "name": "كتابكم رقم (ش.ش/2025/191)" },
+    {
+      "id": "event1",
+      "label": "Event",
+      "name": "طلب الإفادة بالرأي القانوني",
+      "date": "2025-02-10"
+    },
+    { "id": "event2", "label": "Event", "name": "تجديد قيد مدققي الحسابات" },
+    { "id": "prof1", "label": "Profession", "name": "مدقق حسابات قطري" },
+    { "id": "prof2", "label": "Profession", "name": "مدقق حسابات غير قطري" }
+  ],
+  "edges": [
+    { "outV": "person1", "label": "مدير", "inV": "dept1" },
+    { "outV": "person2", "label": "مدير", "inV": "dept2" },
+    { "outV": "person3", "label": "مدير", "inV": "dept1" },
+    { "outV": "person4", "label": "باحث", "inV": "section1" },
+    { "outV": "dept2", "label": "أرسلت", "inV": "memo1" },
+    { "outV": "memo1", "label": "تستشهد", "inV": "art26" },
+    { "outV": "committee1", "label": "تشرف_على", "inV": "prof1" },
+    { "outV": "committee1", "label": "تشرف_على", "inV": "prof2" },
+    { "outV": "person3", "label": "طلب", "inV": "event1" },
+    { "outV": "event1", "label": "تم_في", "inV": "letter1" },
+    { "outV": "event1", "label": "تاريخ", "inV": "event1" },
+    { "outV": "prof1", "label": "يخضع_لـ", "inV": "art26" },
+    { "outV": "prof2", "label": "يخضع_لـ", "inV": "art26" },
+    { "outV": "art26", "label": "تحظر", "inV": "event2" },
+    { "outV": "law1", "label": "يحتوي_على", "inV": "art4" },
+    { "outV": "law1", "label": "يحتوي_على", "inV": "art6" },
+    { "outV": "law1", "label": "يحتوي_على", "inV": "art10" },
+    { "outV": "law1", "label": "يحتوي_على", "inV": "art18" },
+    { "outV": "law1", "label": "يحتوي_على", "inV": "art26" }
+  ]
+}
